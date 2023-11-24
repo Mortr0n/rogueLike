@@ -1,4 +1,11 @@
 /// what happens when a bullet hits an enemy
+var _killEnemy = function()
+{
+	instance_destroy();
+}
+
+
+
 
 // dead variable is set in create event of the enemy
 if (!dead) {
@@ -11,7 +18,9 @@ if (!dead) {
 	// now destroy the bullet using keyword other which references the item that is colliding with this current
 	// oEnemy object.  so the oBullet in the collision here
 	instance_destroy(other);
+	time_source_start(_timeToDestroy)
 }
+
 
 
 

@@ -2,6 +2,8 @@
 if (dead) {
 	sprite_index = sEnemyDead;
 	speed = 0;
+	show_debug_message($"steps: {string(_delayInSteps)}")
+	alarm[1] = _delayInSteps;
 } else {
 	// point enemy towards player
 	direction = point_direction(x, y, oPlayer.x, oPlayer.y);
