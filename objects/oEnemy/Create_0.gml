@@ -4,12 +4,14 @@ dead = false
 
 _delayInSeconds = 1
 _delayInSteps = _delayInSeconds;
+_timeToDestroy = -1
+
 var myFunction = function() {
-	alarm[0] = 1
+	alarm[1] = 1
 }
 
 
-var _timeToDestroy = time_source_create(time_source_game, 1, time_source_units_seconds, myFunction, [], -1, time_source_expire_after );
+_timeToDestroy = time_source_create(time_source_game, 3, time_source_units_seconds, myFunction, [], -1, time_source_expire_after );
 
 
 

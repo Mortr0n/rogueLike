@@ -18,7 +18,11 @@ if (!dead) {
 	// now destroy the bullet using keyword other which references the item that is colliding with this current
 	// oEnemy object.  so the oBullet in the collision here
 	instance_destroy(other);
-	time_source_start(_timeToDestroy)
+	//time_source_start(_timeToDestroy)
+	// Start the time source
+    if (_timeToDestroy != -1) { // Check if _timeToDestroy has been initialized
+        time_source_start(_timeToDestroy);
+    }
 }
 
 
